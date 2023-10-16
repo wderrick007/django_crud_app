@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+{% block area %}
+
+
+<form method="POST" class="post-form" action="/">  
+        {% csrf_token %}  
+    <div class="col-md-5 offset-md-4">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Enter Details</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Person Id:</label>  
+    <div class="col-sm-4">  
+      {{ form.person_id }}  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Person Name:</label>  
+    <div class="col-sm-4">  
+      {{ form.person_name }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Person Email:</label>  
+    <div class="col-sm-4">  
+      {{ form.person_email }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Person Contact:</label>  
+    <div class="col-sm-4">  
+      {{ form.person_contact }}  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-primary">Submit</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+
+
+{% endblock %}

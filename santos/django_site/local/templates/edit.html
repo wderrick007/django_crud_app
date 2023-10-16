@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block area %}
+
+<form method="POST" class="post-form" action="/update/{{person2.id}}">  
+        {% csrf_token %}  
+    <div class="col-md-5 offset-md-3">  
+<br>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <h3>Update Details</h3>  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Person Id:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="person_id"  required maxlength="20" value="{{ person2.person_id }}"/>  
+    </div>  
+  </div>  
+  <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Person Name:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="person_name"  required maxlength="100" value="{{ person2.person_name}}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Person Email:</label>  
+    <div class="col-sm-4">  
+        <input type="email" name="person_email"  required maxlength="254" value="{{ person2.person_email }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-2 col-form-label">Person Contact:</label>  
+    <div class="col-sm-4">  
+        <input type="text" name="person_contact" required maxlength="15" value="{{ person2.person_contact }}" />  
+    </div>  
+  </div>  
+    <div class="form-group row">  
+    <label class="col-sm-1 col-form-label"></label>  
+    <div class="col-sm-4">  
+    <button type="submit" class="btn btn-success">Update</button>  
+    </div>  
+  </div>  
+    </div>  
+</form>  
+
+{% endblock %}
